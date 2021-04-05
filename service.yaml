@@ -4,7 +4,7 @@ metadata:
   name: public-svc
 spec:
   type: LoadBalancer
-  loadBalancerIP: 51.105.161.51
+  loadBalancerIP: 20.47.96.122
   ports:
   - port: 80
   selector:
