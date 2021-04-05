@@ -69,7 +69,7 @@ resource "azurerm_network_interface" "nic" {
     resource_group_name       = azurerm_resource_group.rsg.name
 
     ip_configuration {
-        name                          = "myNicConfiguration"
+        name                          = "NicConfiguration"
         subnet_id                     = azurerm_subnet.subnet.id
         private_ip_address_allocation = "Dynamic"
         public_ip_address_id          = azurerm_public_ip.publicip.id
@@ -80,7 +80,7 @@ resource "azurerm_network_interface" "nic" {
     }
 }
 
-resource "azurerm_network_interface_security_group_association" "nsg-assiciation" {
+resource "azurerm_network_interface_security_group_association" "nsg-assoiciation" {
     network_interface_id      = azurerm_network_interface.nic.id
     network_security_group_id = azurerm_network_security_group.nsg.id
 }
